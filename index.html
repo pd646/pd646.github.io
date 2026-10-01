@@ -3,10 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Dora Do's accounting portfolio featuring education, skills, and academic projects at Rutgers Business School.">
   <title>Dora Do | Accounting Portfolio</title>
+
   <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,15 +23,21 @@
       background: #f7f8fa;
       line-height: 1.7;
     }
-    a { color: #a71930; }
+
+    a {
+      color: #a71930;
+    }
+
     a:focus-visible {
       outline: 3px solid #a71930;
       outline-offset: 5px;
     }
+
     header {
       background: white;
       border-bottom: 1px solid #e1e4e9;
     }
+
     nav {
       max-width: 1100px;
       margin: auto;
@@ -33,35 +48,126 @@
       gap: 20px;
       flex-wrap: wrap;
     }
+
     .brand {
       font-weight: bold;
-      font-size: 22px;
+      font-size: 24px;
       color: #a71930;
       text-decoration: none;
     }
-    .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
     .nav-links a {
       color: #253044;
       text-decoration: none;
       font-weight: bold;
     }
-    main { max-width: 1100px; margin: auto; padding: 0 24px; }
-    .hero { padding: 80px 0 60px; }
+
+    .nav-links a:hover {
+      color: #a71930;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 40px 0;
+      scroll-margin-top: 24px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 250px minmax(0, 1fr);
+      align-items: center;
+      gap: 48px;
+      padding: 70px 0;
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .headshot {
+      display: block;
+      width: 230px;
+      height: 230px;
+      max-width: 100%;
+      margin: 0 auto 20px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      border: 6px solid white;
+      box-shadow: 0 6px 24px rgba(37, 48, 68, 0.12);
+    }
+
+    .profile-name {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .profile-school {
+      margin: 4px 0;
+      color: #a71930;
+      font-weight: bold;
+    }
+
+    .profile-year {
+      margin: 0;
+      color: #596477;
+      font-size: 14px;
+    }
+
     .eyebrow {
       color: #a71930;
       font-weight: bold;
       letter-spacing: 2px;
       text-transform: uppercase;
-      font-size: 13px;
+      font-size: 12px;
     }
+
     h1 {
-      font-size: clamp(42px, 7vw, 72px);
-      line-height: 1.1;
-      margin: 18px 0;
+      font-size: clamp(38px, 5vw, 60px);
+      line-height: 1.15;
+      margin: 16px 0 22px;
     }
-    .statement { font-size: 22px; max-width: 780px; }
-    .muted { color: #596477; }
-    .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 26px; }
+
+    h2 {
+      font-size: 30px;
+      line-height: 1.3;
+      margin: 0 0 20px;
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      font-size: 21px;
+      line-height: 1.4;
+    }
+
+    .statement {
+      font-size: 21px;
+      margin-bottom: 20px;
+    }
+
+    .muted {
+      color: #596477;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
     .button {
       display: inline-block;
       padding: 11px 20px;
@@ -70,57 +176,132 @@
       text-decoration: none;
       font-weight: bold;
     }
-    .primary { background: #a71930; color: white; }
-    section { padding: 35px 0; scroll-margin-top: 20px; }
-    h2 { font-size: 30px; margin: 0 0 20px; }
-    h3 { margin: 0 0 12px; font-size: 21px; }
+
+    .primary {
+      background: #a71930;
+      color: white;
+    }
+
+    .primary:hover {
+      background: #861327;
+    }
+
+    .secondary:hover {
+      background: #fcecef;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
     }
+
     .card {
       background: white;
       border: 1px solid #e1e4e9;
       border-radius: 14px;
       padding: 26px;
+      overflow-wrap: anywhere;
     }
-    .card p { margin-top: 0; }
+
+    .card p {
+      margin-top: 0;
+    }
+
+    .card ul {
+      margin-bottom: 0;
+      padding-left: 20px;
+    }
+
+    .card li {
+      margin-bottom: 6px;
+    }
+
     .tag {
       display: inline-block;
       padding: 4px 10px;
-      margin: 0 5px 8px 0;
+      margin-bottom: 15px;
       border-radius: 6px;
       background: #fcecef;
       color: #8e172a;
-      font-size: 13px;
+      font-size: 12px;
+      font-weight: bold;
     }
-    ul { padding-left: 20px; }
+
     .project {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
     }
-    .project a { margin-top: auto; font-weight: bold; }
+
+    .project a {
+      margin-top: auto;
+      padding-top: 12px;
+      font-weight: bold;
+    }
+
+    .education {
+      border-left: 4px solid #a71930;
+    }
+
+    .contact-card {
+      background: white;
+      border: 1px solid #e1e4e9;
+      border-radius: 14px;
+      padding: 32px;
+    }
+
     footer {
-      margin-top: 45px;
+      margin-top: 40px;
       padding: 28px 24px;
       text-align: center;
       border-top: 1px solid #e1e4e9;
       color: #596477;
       font-size: 14px;
     }
-    @media (max-width: 800px) {
-      .grid { grid-template-columns: 1fr; }
-      .hero { padding-top: 45px; }
-      .statement { font-size: 20px; }
+
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 45px 0;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-content .actions {
+        justify-content: center;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .headshot {
+        width: 200px;
+        height: 200px;
+      }
+
+      .statement {
+        font-size: 19px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
     <nav aria-label="Main navigation">
       <a class="brand" href="#about">Dora Do</a>
+
       <div class="nav-links">
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
@@ -131,36 +312,77 @@
   </header>
 
   <main>
-    <section class="hero" id="about">
-      <img src="headshot.jpg"
-     alt="Dora Do"
-     width="180"
-     height="180"
-     style="display:block; object-fit:cover; border-radius:50%;
-            border:4px solid white; margin-bottom:24px;
-            box-shadow:0 4px 16px rgba(0,0,0,0.12);">
-      <div class="eyebrow">Rutgers Business School · Accounting</div>
-      <h1>Hi, I'm Dora Do.</h1>
-      <p class="statement">
-        I am an accounting student at Rutgers Business School developing
-        financial, analytical, and organizational skills for a career
-        in public accounting.
-      </p>
-      <p class="muted">
-        Bachelor of Science in Accounting · Expected May 2029<br>
-        GPA: 3.8/4.0 · Dean's List, Spring 2026
-      </p>
-      <div class="actions">
-        <a class="button primary" href="#projects">Explore My Projects</a>
-        <a class="button" href="resume.pdf" download>Download Resume</a>
+    <section class="hero" id="about" aria-labelledby="intro-title">
+      <div class="profile">
+        <img
+          class="headshot"
+          src="headshot.jpg"
+          alt="Portrait of Dora Do"
+          width="230"
+          height="230">
+
+        <p class="profile-name">Dora Do</p>
+        <p class="profile-school">Rutgers Business School</p>
+        <p class="profile-year">Accounting · Class of 2029</p>
+      </div>
+
+      <div class="hero-content">
+        <div class="eyebrow">Accounting Student · Aspiring Auditor</div>
+
+        <h1 id="intro-title">Hi, I'm Dora Do.</h1>
+
+        <p class="statement">
+          I am an accounting student at Rutgers Business School developing
+          financial, analytical, and organizational skills for a career
+          in public accounting.
+        </p>
+
+        <p class="muted">
+          Interested in audit and tax opportunities, I enjoy learning
+          how financial information helps businesses make informed decisions.
+        </p>
+
+        <div class="actions">
+          <a class="button primary" href="#projects">
+            Explore My Projects
+          </a>
+
+          <a class="button secondary"
+             href="Dora%20Do%20Resume.pdf"
+             download>
+            Download Resume
+          </a>
+        </div>
       </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
+    <section id="education" aria-labelledby="education-title">
+      <h2 id="education-title">Education</h2>
+
+      <div class="card education">
+        <h3>Rutgers Business School</h3>
+
+        <p>
+          Bachelor of Science in Accounting<br>
+          Expected Graduation: May 2029<br>
+          GPA: 3.8/4.0 · Dean's List, Spring 2026
+        </p>
+
+        <p class="muted">
+          Relevant coursework: Financial Accounting, Introduction to
+          Management, Microeconomics, Macroeconomics, Business Statistics,
+          and Introduction to Marketing.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+
       <div class="grid">
         <div class="card">
           <h3>Technical</h3>
+
           <ul>
             <li>Microsoft Excel</li>
             <li>Microsoft PowerPoint</li>
@@ -169,8 +391,10 @@
             <li>Expense tracking and recordkeeping</li>
           </ul>
         </div>
+
         <div class="card">
           <h3>Professional</h3>
+
           <ul>
             <li>Communication</li>
             <li>Teamwork</li>
@@ -179,117 +403,201 @@
             <li>Analytical problem-solving</li>
           </ul>
         </div>
+
         <div class="card">
           <h3>Languages &amp; Certification</h3>
+
           <ul>
             <li>Vietnamese — Native</li>
             <li>English — Proficient</li>
             <li>Chinese — Intermediate</li>
+            <li>LSEG Workspace Certification Assessment</li>
           </ul>
-          <p>LSEG Workspace Certification Assessment</p>
         </div>
       </div>
     </section>
 
-    <section id="projects">
-      <h2>Selected Projects</h2>
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Selected Projects</h2>
+
       <p class="muted">
-        Academic group projects exploring finance, business operations,
-        and entrepreneurship.
+        Academic group projects exploring financial analysis,
+        business operations, and entrepreneurship.
       </p>
+
       <div class="grid">
         <article class="card project">
           <span class="tag">Finance · Group Project</span>
+
           <h3>Investment Analysis</h3>
+
           <p>
             Collaborated on an investment project comparing selected
             companies using financial metrics such as price-to-earnings
-            ratios, earnings per share, and profit margins. The team
-            reviewed portfolio performance and reflected on risk
-            tolerance and investment decisions.
+            ratios, earnings per share, and profit margins.
           </p>
-          <a href="investing.pptx" download>Download Presentation →</a>
+
+          <p>
+            The team evaluated portfolio performance and reflected on
+            risk tolerance, company research, and investment decisions.
+          </p>
+
+          <a href="Investing%20Group%20Project.pptx" download>
+            Download Presentation →
+          </a>
         </article>
 
         <article class="card project">
           <span class="tag">Business Research · Group Project</span>
+
           <h3>Verizon Company &amp; Supply Chain Research</h3>
+
           <p>
             Worked with a team to examine Verizon's competitive position,
-            financial trends, and supply chain operations. My contributions
-            covered its mission, values, business strategies, and supply
-            chain network.
+            financial trends, business strategies, and supply chain operations.
           </p>
-          <a href="verizon.pptx" download>Download Presentation →</a>
+
+          <p>
+            My contributions covered the company's mission, values,
+            business strategies, and supply chain network.
+          </p>
+
+          <a href="SCM%20PROJECT%201%20-%20GROUP%2021.pptx" download>
+            Download Presentation →
+          </a>
         </article>
 
         <article class="card project">
           <span class="tag">Entrepreneurship · Group Project</span>
+
           <h3>DormDash Business Plan</h3>
+
           <p>
             Collaborated on a proposed student-run delivery service
-            for everyday campus essentials. The team developed a business
-            plan covering financial objectives, delivery processes,
-            hiring, employee motivation, and expansion strategies.
+            providing everyday essentials to college students.
           </p>
-          <a href="dormdash.pptx" download>Download Presentation →</a>
+
+          <p>
+            The team developed financial objectives, delivery processes,
+            hiring plans, employee motivation initiatives, and
+            expansion strategies.
+          </p>
+
+          <a href="Group%2024-%20DormDash%20Presentation.pptx" download>
+            Download Presentation →
+          </a>
         </article>
       </div>
     </section>
 
-    <section id="experience">
-      <h2>Experience &amp; Involvement</h2>
+    <section id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Experience &amp; Involvement</h2>
+
       <div class="grid">
         <article class="card">
           <h3>Administrative Assistant</h3>
+
           <p class="muted">
             Phuong Thao Trading and Production Service Company Limited<br>
+            Hung Yen, Vietnam<br>
             May 2025–August 2026
           </p>
-          <p>
-            Organized financial documents, maintained Excel expense
-            spreadsheets, and managed digital and physical business records.
-          </p>
+
+          <ul>
+            <li>
+              Processed and organized over 100 financial documents monthly,
+              including invoices, receipts, and contracts.
+            </li>
+            <li>
+              Maintained Excel spreadsheets to support expense tracking
+              and bookkeeping.
+            </li>
+            <li>
+              Managed digital and physical filing systems for over
+              200 business records.
+            </li>
+          </ul>
         </article>
+
         <article class="card">
           <h3>Rutgers University Accounting Association</h3>
-          <p class="muted">Member · September 2025–Present</p>
-          <p>
-            Participate in professional networking events, firm
-            presentations, and career development workshops to learn
-            about audit, tax, and advisory careers.
+
+          <p class="muted">
+            Member<br>
+            September 2025–Present
           </p>
+
+          <ul>
+            <li>
+              Attend meetings and networking events featuring accounting
+              professionals from Big Four and mid-sized firms.
+            </li>
+            <li>
+              Explore audit, tax, and advisory career paths.
+            </li>
+            <li>
+              Participate in workshops on resumes, interviews,
+              and professional etiquette.
+            </li>
+          </ul>
         </article>
+
         <article class="card">
           <h3>AP Math Tutor</h3>
+
           <p class="muted">
-            Math Honors Society · September 2024–May 2025
+            Math Honors Society<br>
+            September 2024–May 2025
           </p>
-          <p>
-            Tutored students in AP Calculus through individual sessions,
-            practice problems, and exam preparation.
-          </p>
+
+          <ul>
+            <li>
+              Tutored more than five students in AP Calculus through
+              weekly individual sessions.
+            </li>
+            <li>
+              Reviewed practice problems and analytical strategies.
+            </li>
+            <li>
+              Helped students prepare for class assessments and AP exams.
+            </li>
+          </ul>
         </article>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Let's Connect</h2>
-      <p>
-        I am interested in opportunities to learn, contribute, and
-        grow in accounting and public accounting.
-      </p>
-      <div class="actions">
-        <a class="button primary"
-           href="mailto:pd646@scarletmail.rutgers.edu">Email Me</a>
-        <a class="button"
-           href="https://www.linkedin.com/in/phuongthaododora">
-          LinkedIn Profile
-        </a>
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="contact-card">
+        <h2 id="contact-title">Let's Connect</h2>
+
+        <p>
+          I am interested in opportunities to learn, contribute, and
+          grow in accounting, audit, and tax.
+        </p>
+
+        <div class="actions">
+          <a class="button primary"
+             href="mailto:pd646@scarletmail.rutgers.edu">
+            Email Me
+          </a>
+
+          <a class="button secondary"
+             href="https://www.linkedin.com/in/phuongthaododora">
+            LinkedIn Profile
+          </a>
+
+          <a class="button secondary"
+             href="Dora%20Do%20Resume.pdf"
+             download>
+            Download Resume
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>© 2026 Dora Do · Accounting Portfolio</footer>
+  <footer>
+    © 2026 Dora Do · Rutgers Business School · Accounting Portfolio
+  </footer>
 </body>
 </html>
